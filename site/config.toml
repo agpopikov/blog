@@ -1,0 +1,6 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Yep, it's mine blog"
+theme = "basics"
+[params]
+    author = "Andrey Popikov"

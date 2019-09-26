@@ -1,6 +1,6 @@
-baseURL = "http://example.org/"
+baseURL = "http://blog.agpopikov.info/"
 languageCode = "en-us"
-title = "Yep, it's mine blog"
+title = "Yep, it's my blog"
 theme = "basics"
 [params]
     author = "Andrey Popikov"

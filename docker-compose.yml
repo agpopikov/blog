@@ -1,0 +1,20 @@
+version: '2'
+services:
+    blog:
+        image: docker.pkg.github.com/agpopikov/blog/site:latest
+        hostname: blog
+        restart: always
+        container_name: blog
+        logging:
+          driver: json-file
+          options:
+              max-size: "100m"
+              max-file: "25"
+        ports:
+            - "80:80"
+        environment:
+            - TZ=Europe/Moscow
+networks:
+    default:
+        external:
+            name: internal

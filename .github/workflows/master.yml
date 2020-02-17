@@ -25,4 +25,4 @@ jobs:
             echo "${{ secrets.SITE_SSH_KEY }}" > ~/.ssh/id_rsa
             chmod 600 ~/.ssh/id_rsa
             scp -o StrictHostKeyChecking=no Caddyfile docker-compose.yml root@blog.agpopikov.info:~/apps/site/
-            ssh -o StrictHostKeyChecking=no root@blog.agpopikov.info 'cd ~/apps/site && docker-compose up -d'
+            ssh -o StrictHostKeyChecking=no root@blog.agpopikov.info 'cd ~/apps/site && docker-compose pull && docker-compose up -d'

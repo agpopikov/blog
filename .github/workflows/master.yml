@@ -12,8 +12,8 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u agpopikov --password-stdin
       - name: Build site Docker image
         run: |
-          docker build . -t docker.pkg.github.com/agpopikov/blog/site:latest
-          docker push docker.pkg.github.com/agpopikov/blog/site:latest
+          docker build . -t docker.pkg.github.com/agpopikov/blog/site
+          docker push docker.pkg.github.com/agpopikov/blog/site
   deploy-latest:
     runs-on: ubuntu-latest
     needs: build-latest

@@ -1,14 +1,13 @@
 ---
-title: "Intro"
+title: ""
 date: 2018-09-29T11:36:33+08:00
 draft: false
 featuredImg: ""
 tags: 
-  - Demo
+  - intro
 ---
 
-This is some stub text placed here for testing purposes.
-
+TODO
 
 {{< highlight html >}}
 <section id="main">

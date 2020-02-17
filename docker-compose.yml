@@ -1,10 +1,13 @@
 version: '2'
 services:
-    blog:
+    site:
         image: docker.pkg.github.com/agpopikov/blog/site:latest
-        hostname: blog
+        hostname: site
         restart: always
-        container_name: blog
+        container_name: site
+        volumes:
+            - ./Caddyfile:/etc/Caddyfile
+            - .certs:/root/.caddy
         logging:
           driver: json-file
           options:
@@ -12,6 +15,7 @@ services:
               max-file: "25"
         ports:
             - "80:80"
+            - "443:443"
         environment:
             - TZ=Europe/Moscow
 networks:

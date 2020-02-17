@@ -1,26 +1,30 @@
-baseURL = "http://blog.agpopikov.info/"
-title = "Yep, it's my blog"
-theme = "hermit"
-languageCode = "ru-ru"
+baseURL = "/"
+theme = "hello-friend-ng"
 defaultContentLanguage = "ru"
 pygmentsCodefences  = true
 pygmentsUseClasses  = true
 [author]
-    name = "Andrey Popikov"
+  name = "Andrey Popikov"
 
 [params]
   dateform        = "Jan 2, 2006"
   dateformShort   = "Jan 2"
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 -0700"
+  [params.logo]
+    logoText     = "$ cd /www/agpopikov/"
+    logoHomeLink = "/"
 
   # Metadata mostly used in document's head
   # description = ""
   # images = [""]
-  themeColor = "#494f5c"
+  themeColor = "#43a047"
+  defaultTheme = "dark"
 
-  homeSubtitle = "A minimal and fast theme for Hugo."
-  footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  # homeSubtitle = "A minimal and fast theme for Hugo."
+  copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
+  # footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   # bgImg = ""  # Homepage background-image URL
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
@@ -31,8 +35,13 @@ pygmentsUseClasses  = true
   relatedPosts = false  # Add a related content section to all single posts page
   code_copy_button = true # Turn on/off the code-copy-button for code-fields
   
-  # Add custom css
-  # customCSS = ["css/foo.css", "css/bar.css"]
+  customCSS = ["css/style.css"]
+  customJS = []
+
+  [[params.social]]
+    name = "email"
+    url  = "mailto:agpopikov@gmail.com"
+
   [[params.social]]
     name = "twitter"
     url = "https://twitter.com/agpopikov"
@@ -45,13 +54,25 @@ pygmentsUseClasses  = true
     name = "github"
     url = "https://github.com/agpopikov"
 
+
+[languages]
+  [languages.ru]
+    title = "Да, это мой блог"
+    subtitle = "Какой-то подзаголовок"
+    weight    = 1
+
+  [languages.en]
+    title = "Yep, it's my blog"
+    weight    = 2
+    # copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+
 [menu]
   [[menu.main]]
-    name = "Блог"
+    name = "Posts"
     url = "posts/"
     weight = 10
 
   [[menu.main]]
-    name = "Обо мне"
+    name = "About"
     url = "about/"
     weight = 20

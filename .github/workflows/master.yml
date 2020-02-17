@@ -1,0 +1,26 @@
+name: master
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-latest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build site Docker image
+        run: docker build . -t docker.pkg.github.com/agpopikov/blog/site:latest
+      - name: Push image to GitHub registry
+        run: docker push docker.pkg.github.com/agpopikov/blog/site:latest
+  deploy-latest:
+    runs-on: ubuntu-latest
+    needs: build-latest
+    steps:
+        - uses: actions/checkout@v2
+        - name: Run site deploy
+          run: |
+            mkdir ~/.ssh
+            echo "${{ secrets.SITE_SSH_KEY }}" > ~/.ssh/id_rsa
+            chmod 600 ~/.ssh/id_rsa
+            scp Caddyfile docker-compose.yml root@blog.agpopikov.info:~/apps/site/
+            ssh root@blog.agpopikov.info (cd ~/apps/site && docker-compose up -d)

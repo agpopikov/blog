@@ -1,7 +1,7 @@
 version: '2'
 services:
     blog:
-        image: hub.docker.com/agpopikov/blog:latest
+        image: agpopikov/blog:latest
         hostname: blog
         restart: always
         container_name: blog

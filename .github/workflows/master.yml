@@ -9,11 +9,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Login to registry
-        run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u agpopikov --password-stdin
+        run: echo "${{ secrets.DOCKER_HUB_KEY }}" | docker login hub.docker.com -u agpopikov --password-stdin
       - name: Build site Docker image
         run: |
-          docker build . -t docker.pkg.github.com/agpopikov/blog/site
-          docker push docker.pkg.github.com/agpopikov/blog/site
+          docker build . -t hub.docker.com/agpopikov/blog:latest
+          docker push hub.docker.com/agpopikov/blog:latest
   deploy-latest:
     runs-on: ubuntu-latest
     needs: build-latest

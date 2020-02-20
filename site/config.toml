@@ -1,5 +1,5 @@
 baseURL = "/"
-theme = "hello-friend-ng"
+theme = "default"
 defaultContentLanguage = "ru"
 pygmentsCodefences  = true
 pygmentsUseClasses  = true

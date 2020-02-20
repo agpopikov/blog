@@ -13,9 +13,6 @@ services:
           options:
               max-size: "100m"
               max-file: "25"
-        ports:
-            - "80:80"
-            - "443:443"
         environment:
             - TZ=Europe/Moscow
 networks:

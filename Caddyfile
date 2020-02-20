@@ -1,7 +1,4 @@
-https://blog.agpopikov.info, https://agpopikov.info {
-    root /srv/www/site
-    proxy /comments remark:80 {
-      websocket
-      transparent
-    }
+:80 {
+  root /srv/www/site
+  log stdout
 }

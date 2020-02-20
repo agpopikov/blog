@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Login to registry
-        run: echo "${{ secrets.DOCKER_HUB_KEY }}" | docker login hub.docker.com -u agpopikov --password-stdin
+        run: echo "${{ secrets.DOCKER_HUB_KEY }}" | docker login -u agpopikov --password-stdin
       - name: Build site Docker image
         run: |
           docker build . -t hub.docker.com/agpopikov/blog:latest

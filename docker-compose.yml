@@ -6,7 +6,6 @@ services:
         restart: always
         container_name: blog
         volumes:
-            - ./Caddyfile:/etc/Caddyfile
             - .certs:/root/.caddy
         logging:
           driver: json-file

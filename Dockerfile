@@ -10,3 +10,4 @@ FROM abiosoft/caddy:latest
 
 COPY Caddyfile /etc/Caddyfile
 COPY --from=build /tmp/site/public /srv/www/site
+RUN ls -lah /srv/www/site/

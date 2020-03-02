@@ -9,5 +9,4 @@ RUN (cd /tmp/site && hugo && ls -lah /tmp/site/public)
 FROM abiosoft/caddy:latest
 
 COPY Caddyfile /etc/Caddyfile
-COPY --from=build /tmp/site/public /srv/www/site
-RUN ls -lah /srv/www/site/
+COPY --from=build /tmp/site/public /www/site

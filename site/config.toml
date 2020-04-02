@@ -13,12 +13,13 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 -0700"
   [params.logo]
-    logoText     = "$ cd /www/agpopikov/"
+    logoText     = "$ cd ~"
     logoHomeLink = "/"
 
   # Metadata mostly used in document's head
   # description = ""
   # images = [""]
+  contentTypeName = "posts"
   themeColor = "#43a047"
   defaultTheme = "light"
   homeSubtitle = "A minimal and fast theme for Hugo."
@@ -56,13 +57,14 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
     homeSubtitle = "Engineering software and not only"
     weight    = 1
 
-    [[menu.main]]
-      name = "Блог"
-      identifier = "posts"
-      url = "posts/"
-      weight = 10
-
-    [[menu.main]]
-      name = "Об авторе"
-      url = "about/"
-      weight = 20
+[menu]
+  [[menu.main]]
+    name = "Блог"
+    identifier = "posts"
+    url = "posts/"
+    weight = 10
+  [[menu.main]]
+    name = "Об авторе"
+    identifier = "about"
+    url = "about/"
+    weight = 20

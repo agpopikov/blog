@@ -2,7 +2,7 @@
     font-size: 0.8rem;
 }
 
-main h1 {
+main > div > h1 {
     margin-bottom: 0;
 }
 
@@ -12,4 +12,12 @@ main h1 {
 
 body.dark-theme .logo .logo__cursor {
     background-color: #fafafa;
+}
+
+p, nav.menu a {
+    font-family: sans-serif;
+}
+
+main.posts > h1 {
+    /* display: none; */
 }

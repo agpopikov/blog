@@ -1,7 +1,15 @@
-.logo__cursor {
-    background-color: #2e7d32;
+.footer__content {
+    font-size: 0.8rem;
 }
 
-body {
-   background: #000 !important;
+main h1 {
+    margin-bottom: 0;
+}
+
+.logo .logo__cursor {
+    background-color: rgb(33, 32, 32);
+}
+
+body.dark-theme .logo .logo__cursor {
+    background-color: #fafafa;
 }

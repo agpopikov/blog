@@ -1,0 +1,3 @@
+root = true
+[*.toml]
+ident_size=2

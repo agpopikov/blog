@@ -13,7 +13,7 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04 -0700"
   [params.logo]
-    logoText     = "$ cd ~"
+    logoText     = "agpopikov.info"
     logoHomeLink = "/"
 
   # Metadata mostly used in document's head
@@ -54,17 +54,17 @@ copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_
 [languages]
   [languages.ru]
     title = "Andrey Popikov"
-    homeSubtitle = "Engineering software and not only"
+    homeSubtitle = "engineering software and not only"
     weight    = 1
 
 [menu]
   [[menu.main]]
-    name = "Блог"
+    name = "блог"
     identifier = "posts"
     url = "posts/"
     weight = 10
   [[menu.main]]
-    name = "Об авторе"
+    name = "об авторе"
     identifier = "about"
     url = "about/"
     weight = 20
